@@ -11,6 +11,13 @@ server.register([require('vision'), require('inert'), {register: require('lout')
     if (err) {
         console.log(err);
     }
+    server.views({
+        engines: {
+            html: require('handlebars')
+        },
+        relativeTo: __dirname,
+        path: 'server/templates'
+    });
 });
 
 for (route in Routes) {

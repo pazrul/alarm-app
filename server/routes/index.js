@@ -1,10 +1,10 @@
 var controllers = require('../controllers/');
-console.log(controllers);
+
 module.exports = [{
     path: '/',
     method: 'GET',
     handler: function (request, reply) {
-        reply('home!');
+        reply.view('default');
     }
 },
 {
