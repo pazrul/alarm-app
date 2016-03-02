@@ -1,6 +1,8 @@
 const Hapi = require('hapi');
 const Twilio = require('twilio');
 const Routes = require('./server/routes/');
+const config = require('./config.js');
+//const API_KEY = config.TWILIO_API_KEY;
 
 var portNumber = process.env.PORT ? process.env.PORT : 8080;
 var server = new Hapi.Server();
