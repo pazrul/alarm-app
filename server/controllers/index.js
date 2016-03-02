@@ -1,9 +1,10 @@
 var Promise = require('bluebird');
-var sid = require('../../config.js').TWILIO_SID;
-var token = require('../../config.js').TWILIO_TOKEN;
-var client = require('twilio')(sid, token);
-var sendingNumber = require('../../config.js').MAIN_PHONE_NUMBER;
+var config = require('../../config.js');
+var sid = config.TWILIO_SID;
+var token = config.TWILIO_TOKEN;
+var sendingNumber = config.MAIN_PHONE_NUMBER;
 
+const client = require('twilio')(sid, token);
 
 function randNumber(num) {
     return new Promise(function (resolve, reject) {
